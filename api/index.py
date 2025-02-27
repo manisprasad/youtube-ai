@@ -55,6 +55,16 @@ def get_auto_generated_captions(video_url):
     print("Caption file NOT found!")  # Debugging
     return []
 
+
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
+@app.route('/about')
+def about():
+    return 'About'
+
+
 @app.route("/api/getCaptions", methods=["GET"])
 def get_captions():
     """API endpoint to get YouTube video captions."""
